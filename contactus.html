@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contactus.css">
+    <script>
+        function validateForm() {
+
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == null || x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            var y = document.forms["myForm"]["email"].value;
+            if (y == null || y == "") {
+                alert("Email name must be filled out");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <b>
+                <a href="FinalProject.html">Home</a> &nbsp;
+                <a href="menu.html">Menu</a> &nbsp;
+                <a href="contactus.html">Contact us</a> &nbsp;
+            </b>
+        </div>
+        <div class="logo">
+            <a href="FinalProject.html"><img src="../milestone3submission/Images/Joe's.jpg" alt="pizza"></a>
+        </div>
+    </header>
+
+
+    <div class="flexContainer">
+        <form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+            <h2>Contact Our Store</h2>
+            <div>
+                <label for="name">What is your name?</label>
+                <input id="name" name="fname">
+            </div>
+
+            <div>
+                <label for="email">What is your email address?</label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div>
+                <label for="select">Where did you hear about us?</label>
+                <select name="select" id="select">
+                    <option value="Select">Select one</option>
+                    <option value="friend">Friend</option>
+                    <option value="socialmedia">Social Meida</option>
+                    <option value="newspaper">Newspaper</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="comments">Any additional comments?</label>
+                <textarea rows="3" cols="30" name="comment" id="comments"></textarea>
+            </div>
+
+            <button>Submit</button>
+
+        </form>
+        <div>
+            <img src="../milestone3submission/Images/Pic16.jpg" width="450" height="500" alt="pizza">
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="image1">
+            <img src="../milestone3submission/Images/Pic15.JPG" width="450" height="500" alt="pizza">
+        </div>
+        <div class="text1">
+            <h2>Address & Hours</h2>
+            <p>500 Terry Francois Street San Francisco, CA 94158
+                <br>
+                Monday - Thursday 7am - 7pm
+                <br>
+                Friday - Saturday 7am - 4pm
+                <br>
+                Sunday - Closed
+        </div>
+    </div>
+
+    <footer>
+        <small> Call us today @ 111-222-3333<br>
+            <br>
+            &copy; Copyright 2022.All Rights Reserved.</small>
+    </footer>
+</body>
+
+</html>
